@@ -32,12 +32,6 @@
     border-bottom: 4px solid #fff;
     transition: .5s;
 }
-.search i
-{
-    color: #fff;
-    font-size: 1.5em;
-    margin-left: 20px;
-}
 .background
 {
     width: 100%;
@@ -71,7 +65,7 @@
     width: 700px;
     padding: 100px 0;
 }
-.content a
+.content p
 {
     position: relative;
     text-decoration: none;
@@ -200,7 +194,7 @@ button:active
 }
 .login .sign-up
 {
-    display: flex;
+    display:flex;
     justify-content: center;
 }
 .login .sign-up a
@@ -216,4 +210,87 @@ button:active
 .sign-up a:hover
 {
     text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .header .nav a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    
+    .background, .home {
+        height: auto;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    
+    .content {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .content p {
+        font-size: 2em;
+    }
+    
+    .content h2 {
+        font-size: 2.5em;
+    }
+    
+    .content h3 {
+        font-size: 1.5em;
+    }
+    
+    .content pre {
+        font-size: 1em;
+    }
+    
+    .content .icon {
+        font-size: 1em;
+    }
+    
+    .content .icon i {
+        margin-left: 10px;
+    }
+    
+    .login {
+        width: 100%;
+        padding: 20px;
+        backdrop-filter: blur(5px);
+    }
+    
+    .login h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    
+    .login .input .input1 {
+        font-size: 14px;
+    }
+    
+    .login .input i {
+        right: -310px;
+        bottom: 20px;
+    }
+    
+    .check {
+        margin-bottom: 20px;
+    }
+    
+    .check a {
+        font-size: 14px;
+    }
+    
+    .login .button {
+        height: 35px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        font-size: 16px;
+    }
+    
+    .login .sign-up {
+        flex-direction: column;
+        align-items: center;
+    }
 }

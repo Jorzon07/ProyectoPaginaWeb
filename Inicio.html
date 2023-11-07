@@ -1,64 +1,239 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <script src="https://kit.fontawesome.com/c9f5871d83.js" crossorigin="anonymous"></script>
-    <title>Login.Jorzon web</title>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="Inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#"> Inicio </a>
-            <a href="#"> Informacion </a>
-            <a href="#"> Servicios </a>
-            <a href="#"> Contacto </a>
-        </nav>
-        <div class="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-user"></i>
+    <header>
+        <div class="menu-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo" id="logo">
+            </div>
+            <div class="menu" id="menu2">
+                <a href="Registro.html">Registrar</a>
+                <a href="Logueo.html">Ingresar</a>
+            </div>
+        </div>        
+        <script src="Inicio.js"></script>
+        <div class="navDiv">
+            <label for="menu">
+                <i class="fas fa-bars"></i>
+            </label>
         </div>
+        <input type="checkbox" id="menu">
+        <ul class="nav">
+            <label for="menu">
+                <i class="fas fa-times"></i>
+            </label>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#skill">Populares</a></li>
+            <li><a href="#proyect">Noticias Recientes</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
     </header>
     <div class="background"></div>
-    <section class="home">
-        <div class="content">
-            <a href="#" class="logo">  <i class="fa-solid fa-spider"></i>Jorzon Web</a>
-            <h2> Bienvenidos! </h2>
-            <h3> Agradecemos su apoyo </h3>
-            <pre> Visita mis redes sociales </pre>
-            <div class="icon">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-github"></i>
+    <div class="container">
+        <div class="banner" id="home">
+            <div class="content">
+                <h1>Bienvenidos a JorzonWeb </h1>
+                <h1>Tu Fuente Definitiva de Noticias de Anime</h1>
+                <p>En JorzonWeb, nos apasiona el mundo del anime y estamos emocionados de compartir 
+                   esa pasión contigo. Somos tu destino número uno para mantenerte al tanto de las 
+                   últimas novedades, emocionantes anuncios y análisis profundos del emocionante universo del anime.
+                   Nuestra misión es ofrecerte una experiencia única en la que puedas explorar el vasto y 
+                   diverso mundo del anime. Ya seas un veterano amante del anime o estés recién comenzando a descubrir 
+                   este emocionante género, nuestra página está diseñada para satisfacer todas tus necesidades.
+                </p>
+            </div>
+            <div class="avatar">
+                <img src="luffy-one-piece-personaje-anime-y-pelicula_1630x2880_xtrafondos.com.jpg" alt="Avatar">
             </div>
         </div>
-        <div class="login">
-            <h2> Inicio </h2>
-            <div class="input">
-                <input type="text" class="input1" placeholder="Correo" required>
-               <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="input">
-                <input type="password" class="input1" placeholder="Contraseña" required>
-                <i class="fa-solid fa-lock"></i>
-            </div>
-            <div class="check">
-                <label> <input type="checkbox">Recordar </label>
-                <a href="#"> ¿Olvidaste la contraseña?</a>
-            </div>
-            <div class="button">
-                <button class="btn"> Iniciar </button>
-            </div>
-            <div class="sign-up">
-                <p> ¿No tienes una cuenta?</p>
-                <a href="#"> Registrate</a>
-            </div>
+        <div id="skill">
+            <h1 class="title">Noticias Populares</h1>
+            <div class="swiper">
+
+        <div class="swiper-wrapper">
+            
+            <a href="Noticia1.html" class="swiper-slide"> 
+                <img src="Noticiap1.jpg" alt="">
+            </a>
+            <a href="" class="swiper-slide"> 
+                <img src="Noticiap2.jpg" alt="">
+            </a>
+            <a href="" class="swiper-slide"> 
+                <img src="Noticiap4.jpg" alt="">
+            </a>
+            <a href="" class="swiper-slide"> 
+                <img src="Noticiap3.jpg" alt="">
+            </a>
+            <a href="" class="swiper-slide">
+                <img src="Noticiap5.jpg" alt="">
+            </a>
+            
         </div>
-    </section>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script> swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        allowTouchMove: true,
+        effect: "cube",
+        autoplay: {
+        delay: 3000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+        },
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true,
+        },
+      
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+        },
+      });
+    </script>
+        </div>
+    <div id="proyect">
+        <h1 class="title">Noticias Recientes</h1>
+        <table>
+            <tr>
+                <td>
+                    <a href="">
+                    <div class="news-box">
+                        <div class="news-image" style="background-image: url('portada_kaguya-152.jpg');"></div>
+                        <h3>Te encantará esta cosplayer de Kaguya-sama: Love is War</h3>
+                        <span class="op5 mar2">
+                            <i class="fa-clock far op7 mar"></i>
+                              5 noviembre, 2023
+                        </span>
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="">
+                    <div class="news-box">
+                        <div class="news-image" style="background-image: url('portada_shingeki-190-1536x864.jpg');"></div>
+                        <h3>Shingeki no Kyojin tumba los servidores de Crunchyroll con su final</h3>
+                        <span class="op5 mar2">
+                            <i class="fa-clock far op7 mar"></i>
+                              4 noviembre, 2023
+                        </span>
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="">
+                    <div class="news-box">
+                        <div class="news-image" style="background-image: url('portada_solo-leveling-13-1536x864.jpg');"></div>
+                        <h3>Solo Leveling emociona con un nuevo avance</h3>
+                        <span class="op5 mar2">
+                            <i class="fa-clock far op7 mar"></i>
+                              1 noviembre, 2023
+                        </span>
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="">
+                    <div class="news-box">
+                        <div class="news-image" style="background-image: url('portada_noragami-11-1536x864.jpg');"></div>
+                        <h3>Noragami llegará a su final en enero</h3>
+                        <span class="op5 mar2">
+                            <i class="fa-clock far op7 mar"></i>
+                              1 noviembre, 2023
+                        </span>
+                    </div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="">
+                    <div class="news-box">
+                        <div class="news-image" style="background-image: url('portada_sousou-no-frieren-21-1536x864.jpg');"></div>
+                        <h3>Sousou no Frieren está entre lo más visto esta temporada</h3>
+                        <span class="op5 mar2">
+                            <i class="fa-clock far op7 mar"></i>
+                              31 octubre, 2023
+                        </span>
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="">
+                    <div class="news-box">
+                        <div class="news-image" style="background-image: url('portada_jujutsu-kaisen-181-1536x864.jpg');"></div>
+                        <h3>Jujutsu Kaisen emociona con un visual para el Incidente de Shibuya</h3>
+                        <span class="op5 mar2">
+                            <i class="fa-clock far op7 mar"></i>
+                              30 octubre, 2023
+                        </span>
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="Noticia1.html">
+                    <div class="news-box">
+                        <div class="news-image" style="background-image: url('portada_halloween-2023.jpg');"></div>
+                        <h3>¡Feliz Halloween te desea la industria del anime!</h3>
+                        <span class="op5 mar2">
+                        <i class="fa-clock far op7 mar"></i>
+                          30 octubre, 2023
+                        </span>
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="">
+                    <div class="news-box">
+                        <div class="news-image" style="background-image: url('portada_spy-x-family-181-1536x864.jpg');"></div>
+                        <h3>Atsumi Tanezaki, la voz de Anya Forger, anuncia su matrimonio</h3>
+                        <span class="op5 mar2">
+                            <i class="fa-clock far op7 mar"></i>
+                              2 octubre, 2023
+                        </span>
+                    </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <div id="contact">
+            <h1 class="title">Contacto</h1>
+            <ul class="contact">
+                <a href="https://www.facebook.com/jorgeivan.garzonsanchez/" target="_blank">
+                    <li><i class="fab fa-facebook-f"></i></li>
+                </a>
+                <a href="https://www.instagram.com/jorgeivangarzonsanchez/" target="_blank">
+                    <li><i class="fab fa-instagram"></i></li>
+                </a>
+                <a href="https://twitter.com/JorgeIvanGarzo6" target="_blank">
+                    <li><i class="fab fa-twitter"></i></li>
+                </a>
+                
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
-
-
-
