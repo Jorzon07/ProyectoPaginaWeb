@@ -107,8 +107,8 @@ header ul li{
     text-align: justify;
     padding-right: 50px;
 }
-.banner h1{
-    text-align: center;
+.banner .content h1{
+    text-align:left;
 }
 .banner p{
     text-align: justify;
