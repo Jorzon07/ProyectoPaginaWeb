@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -36,6 +37,13 @@ public class UsuarioService {
         if (!usuario.getPassword().equals(usuario.getConfirmPassword())) {
             throw new ServiceException(messagesUtil.getMessage("usuario.confirmpassword.none", locale));
         }
+
+        Optional<Usuario> usuarioExistente = usuarioRepository.findByCorreo(usuario.getCorreo());
+
+        if(usuarioExistente.isPresent()){
+            throw new ServiceException(this.messagesUtil.getMessage("usuario.existente.correo", locale));
+        }
+
 
         usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
         Usuario usuarioRegistrado = usuarioRepository.save(usuario);
