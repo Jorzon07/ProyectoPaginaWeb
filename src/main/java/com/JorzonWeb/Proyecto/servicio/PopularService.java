@@ -7,14 +7,21 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Servicio para manejar operaciones relacionadas con elementos populares.
+ */
 @RequiredArgsConstructor
 @Service
 public class PopularService {
 
     private final PopularRepository popularRepository;
 
-    public List<Popular> populares(){
+    /**
+     * Obtiene la lista de elementos populares.
+     *
+     * @return Una lista de elementos populares.
+     */
+    public List<Popular> populares() {
         return this.popularRepository.findAll();
     }
-
 }
