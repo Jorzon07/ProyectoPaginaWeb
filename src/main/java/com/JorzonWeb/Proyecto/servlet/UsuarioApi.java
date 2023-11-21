@@ -2,16 +2,17 @@ package com.JorzonWeb.Proyecto.servlet;
 
 
 import com.JorzonWeb.Proyecto.dto.Respuesta;
+import com.JorzonWeb.Proyecto.modelo.Role;
 import com.JorzonWeb.Proyecto.modelo.Usuario;
 import com.JorzonWeb.Proyecto.servicio.UsuarioService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Locale;
 
 @RestController
@@ -26,5 +27,11 @@ public class UsuarioApi {
 
         Respuesta respuesta = usuarioService.registrarUsuario(usuario, locale);
         return ResponseEntity.ok(respuesta);
+    }
+
+    @Secured("ADMIN")
+    @GetMapping()
+    public Respuesta listUsuarios(){
+        return usuarioService.listarUsuarios();
     }
 }

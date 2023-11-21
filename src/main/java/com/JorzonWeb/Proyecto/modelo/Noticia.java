@@ -1,5 +1,6 @@
 package com.JorzonWeb.Proyecto.modelo;
 
+import com.JorzonWeb.Proyecto.util.StringListConverter;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -23,6 +24,7 @@ public class Noticia {
     private String imagenSlide;
     private String imagenCaratula;
     private String imagenNoticia;
+    @Convert(converter = StringListConverter.class)
     @Column(columnDefinition = "TEXT")
     private List<String> imagenes;
     private Date fecha;
